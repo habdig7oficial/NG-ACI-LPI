@@ -1,0 +1,7 @@
+{
+    "name": "NG-ac2-teste",
+    "integrations": {
+        "capacitor": {}
+    },
+    "type": "angular"
+}

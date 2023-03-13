@@ -1,0 +1,69 @@
+<!--
+    Copyright © 2023 Mateus Felipe da Silveira Vieira
+
+    Este programa é um software livre; você pode redistribuí-lo e/ou
+    modificá-lo sob os termos da Licença Pública Geral GNU como publicada
+    pela Free Software Foundation; na versão 3 da Licença, ou
+    (a seu critério) qualquer versão posterior.
+
+    Este programa é distribuído na esperança de que possa ser útil,
+    mas SEM NENHUMA GARANTIA; sem uma garantia implícita de ADEQUAÇÃO
+    a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a
+    Licença Pública Geral GNU para mais detalhes.
+
+    Você deve ter recebido uma cópia da Licença Pública Geral GNU junto
+    com este programa. Se não, veja <http://www.gnu.org/licenses/>.
+-->
+
+<ion-app>
+    <ion-header>
+        <ion-title class="ion-margin-top ion-margin-bottom ion-text-center"
+            >Calculador de Reajuste</ion-title
+        >
+    </ion-header>
+
+    <ion-content>
+        <ion-list class="ion-margin">
+            <ion-grid class="ion-justify-content-center ion-align-items-center">
+                <ion-row
+                    class="ion-align-items-baseline ion-justify-content-end"
+                >
+                    <ion-input
+                        placeholder="Insira o valor da compra"
+                        class="ion-margin"
+                        [(ngModel)]="TransationValue"
+                    ></ion-input>
+                </ion-row>
+            </ion-grid>
+        </ion-list>
+
+        <ion-list class="ion-margin">
+            <ion-item>
+                <ion-select
+                    (ionChange)="PayMethodTransfer = $event"
+                    class="ion-justify-content-center ion-align-items-center"
+                    interface="popover"
+                    placeholder="Insira o método de pagamento"
+                >
+                    <ion-select-option value="pix"
+                        >Pix (-10%)</ion-select-option
+                    >
+                    <ion-select-option value="debito"
+                        >Debito (-0%)</ion-select-option
+                    >
+                    <ion-select-option value="credito"
+                        >Credito (+10%)</ion-select-option
+                    >
+                </ion-select>
+            </ion-item>
+        </ion-list>
+
+        <ion-button expand="block" class="ion-margin" (click)="AlteraValor()"
+            >Calcular Desconto</ion-button
+        >
+        <div class="ion-margin"></div>
+        <a href="/ex1">Oi sor :) aqui está o Exercício 1</a>
+
+        <!--{{ PayMethod }}-->
+    </ion-content>
+</ion-app>
